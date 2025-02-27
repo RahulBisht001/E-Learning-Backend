@@ -21,7 +21,7 @@ app.use(cookieParser());
 // cors => cross origin resource sharing
 app.use(
 	cors({
-		origin: ["https://e-learning-frontend-flax.vercel.app/"],
+		origin: ["https://e-learning-frontend-flax.vercel.app"],
 		credentials: true,
 	})
 );
