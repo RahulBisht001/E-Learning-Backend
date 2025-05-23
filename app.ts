@@ -11,6 +11,7 @@ import notificationRouter from "./routes/notification.route";
 import analyticsRouter from "./routes/analytics.route";
 import layoutRouter from "./routes/layout.route";
 import { rateLimit } from "express-rate-limit";
+import aiRouter from "./routes/ai.route";
 
 // body parser
 app.use(express.json({ limit: "50mb" }));
@@ -21,7 +22,10 @@ app.use(cookieParser());
 // cors => cross origin resource sharing
 app.use(
 	cors({
-		origin: ["https://e-learning-frontend-flax.vercel.app"],
+		origin: [
+			"https://e-learning-frontend-flax.vercel.app",
+			"http://localhost:3000",
+		],
 		methods: ["GET", "POST", "PUT", "DELETE"], // Add any methods you need
 		allowedHeaders: ["Content-Type", "Authorization"], // Add headers if required
 		credentials: true,
@@ -44,7 +48,8 @@ app.use(
 	courseRouter,
 	notificationRouter,
 	analyticsRouter,
-	layoutRouter
+	layoutRouter,
+	aiRouter
 );
 
 // testing api
