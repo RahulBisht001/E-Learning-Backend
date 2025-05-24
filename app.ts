@@ -22,7 +22,10 @@ app.use(cookieParser());
 // cors => cross origin resource sharing
 app.use(
 	cors({
-		origin: ["https://e-learning-frontend-flax.vercel.app"],
+		origin: [
+			"https://e-learning-frontend-flax.vercel.app",
+			"http://localhost:3000",
+		],
 		methods: ["GET", "POST", "PUT", "DELETE"], // Add any methods you need
 		allowedHeaders: ["Content-Type", "Authorization"], // Add headers if required
 		credentials: true,
