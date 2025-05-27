@@ -6,7 +6,7 @@ import CourseModel from "../models/course.model";
 
 export const chatWithAI = async (req: Request, res: Response) => {
 	const groq = new Groq({
-		apiKey: "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",
+		apiKey: process.env.CODE_EZ,
 	});
 	const { messages } = req.body;
 

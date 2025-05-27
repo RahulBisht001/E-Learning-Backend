@@ -9,7 +9,7 @@ const groq_sdk_1 = __importDefault(require("groq-sdk"));
 const course_model_1 = __importDefault(require("../models/course.model"));
 const chatWithAI = async (req, res) => {
     const groq = new groq_sdk_1.default({
-        apiKey: "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",
+        apiKey: process.env.CODE_EZ,
     });
     const { messages } = req.body;
     try {
